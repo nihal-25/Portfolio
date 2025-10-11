@@ -12,6 +12,9 @@
   <!-- Navigation -->
   <nav class="navbar">
     <a href="index.html#home" class="logo">Nihal Manjunath</a>
+    <div class="hamburger">
+  <i class="fas fa-bars"></i>
+</div>
     <ul class="nav-links">
       <li><a href="index.html#home">Home</a></li>
       <li><a href="projects.html" style="color: #2ecc71;">Projects</a></li>
@@ -276,5 +279,13 @@
     
   </div>
 </footer>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
 </body>
 </html>

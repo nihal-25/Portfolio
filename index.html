@@ -19,6 +19,9 @@
 <!-- Navigation -->
 <nav class="navbar">
 <a href="#home" class="logo">Nihal Manjunath</a>
+<div class="hamburger">
+  <i class="fas fa-bars"></i>
+</div>
 <ul class="nav-links">
 <li><a href="#home" style="color: #2ecc71;">Home</a></li>
 <li><a href="projects.html">Projects</a></li>
@@ -275,6 +278,15 @@ world.controls().autoRotateSpeed = 10;
     loop: true,        // keeps looping
     autoplay: true,    // starts automatically
     path: 'icons/code dark.json' // path to your Lottie JSON
+  });
+</script>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
   });
 </script>
 
