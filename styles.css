@@ -1211,3 +1211,39 @@ section, div {
   max-width: 100%;
   box-sizing: border-box;
 }
+
+/* 📱 Fix about section alignment on small screens */
+@media (max-width: 1024px) {
+  .about-section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .about-left, .about-right {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .stacks-card, .location-card, .contact-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #globeContainer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-right {
+    padding-left: 0 !important;
+  }
+}
