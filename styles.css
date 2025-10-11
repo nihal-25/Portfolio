@@ -1277,10 +1277,7 @@ section, div {
     gap: 8px; /* reduce gap between text and buttons */
   }
 
-  /* 3️⃣ Move arrow BELOW the animation */
-  .scroll-down {
-     display: none;
-  }
+ 
 
   .scroll-down i {
     font-size: 18px;
