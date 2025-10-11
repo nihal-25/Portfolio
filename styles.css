@@ -1258,7 +1258,7 @@ section, div {
     justify-content: center;
     align-items: center;
     gap: 10px; /* small gap between icons/text */
-     /* reduce top space */
+    margin-bottom: -30px;
   }
 
   .social-linkss a {
