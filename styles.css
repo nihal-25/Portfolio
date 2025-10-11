@@ -1269,7 +1269,8 @@ section, div {
 
   /* 2️⃣ Reduce top gap between animation and links */
   .hero-image {
-    margin-top: -40px; /* pull animation slightly upward */
+    margin-top: -40px;
+    margin-bottom: 10px; /* pull animation slightly upward */
   }
 
   .hero-content {
