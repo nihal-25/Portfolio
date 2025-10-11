@@ -1268,18 +1268,52 @@ section, div {
   }
 
   /* 2️⃣ Reduce top gap between animation and links */
-  .hero-image {
-    margin-top: -40px;
-    margin-bottom: 10px; /* pull animation slightly upward */
-  }
-
-  .hero-content {
-    gap: 8px; /* reduce gap between text and buttons */
-  }
+  
 
  
 
   .scroll-down i {
     font-size: 18px;
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+
+  /* Hero section layout */
+  #hero {
+    padding-bottom: 40px;
+  }
+
+  /* Center and reposition animation */
+  .hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;       /* bring animation closer to social links */
+    margin-bottom: 25px;    /* less space before scroll arrow */
+  }
+
+  .hero-img lottie-player {
+    margin: 0 auto;
+    width: 260px !important;
+    height: auto !important;
+  }
+
+  /* Center scroll-down arrow and move it below animation */
+  .scroll-down {
+    position: relative;
+    top: 0;
+    margin-top: -5px;       /* reduces overlap */
+    margin-bottom: 10px;    /* smaller gap before section border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Slightly reduce hero content spacing */
+  .hero-content {
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
