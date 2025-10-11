@@ -1247,3 +1247,44 @@ section, div {
     padding-left: 0 !important;
   }
 }
+
+/* === MOBILE FIXES === */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Keep Resume, LinkedIn, GitHub in one line */
+  .social-linkss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* small gap between icons/text */
+     /* reduce top space */
+  }
+
+  .social-linkss a {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* slightly smaller text for mobile */
+  }
+
+  /* 2️⃣ Reduce top gap between animation and links */
+  .hero-image {
+    margin-top: -20px; /* pull animation slightly upward */
+  }
+
+  .hero-content {
+    gap: 8px; /* reduce gap between text and buttons */
+  }
+
+  /* 3️⃣ Move arrow BELOW the animation */
+  .scroll-down {
+    position: relative; /* ensure it's not overlapping */
+    margin-top: 10px;   /* spacing below animation */
+    display: flex;
+    justify-content: center;
+  }
+
+  .scroll-down i {
+    font-size: 18px;
+  }
+}
