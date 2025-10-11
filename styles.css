@@ -1277,41 +1277,47 @@ section, div {
   }
 }
 
-/* Mobile view adjustments */
-@media (max-width: 768px) {
 
-  /* Hero section layout */
+@media (max-width: 768px) {
+  /* === HERO SECTION === */
   #hero {
-    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 20px; /* reduce bottom gap */
   }
 
-  /* Center and reposition animation */
+  /* === ANIMATION === */
   .hero-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;       /* bring animation closer to social links */
-    margin-bottom: 25px;    /* less space before scroll arrow */
+    margin-top: 10px;       /* move closer to social links */
+    margin-bottom: 15px;    /* reduce space before arrow */
+    width: 100%;
   }
 
   .hero-img lottie-player {
-    margin: 0 auto;
-    width: 260px !important;
+    width: 250px !important;
     height: auto !important;
+    margin: 0 auto;
+    display: block;
+    transform: translateX(10px); /* moves slightly to the right */
   }
 
-  /* Center scroll-down arrow and move it below animation */
+  /* === SCROLL DOWN ARROW === */
   .scroll-down {
     position: relative;
-    top: 0;
-    margin-top: -5px;       /* reduces overlap */
-    margin-bottom: 10px;    /* smaller gap before section border */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 5px; /* reduce space before bottom line */
+    left: 0; /* ensures it's centered */
   }
 
-  /* Slightly reduce hero content spacing */
+  /* Prevent any weird extra space below hero */
   .hero-content {
     margin-bottom: 0;
     padding-bottom: 0;
