@@ -13,7 +13,13 @@ background-color: var(--dark-bg);
 color: var(--text);
 line-height: 1.6;
 overflow-x: hidden;
-}/* Navigation */
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* 🚫 Prevents horizontal scroll */
+}
+
+/* Navigation */
 .navbar {
 position: fixed;
 top: 0;
@@ -281,9 +287,30 @@ padding-left: 2rem;
 .about-section {
    padding: 2rem 5% 1rem 5%; /* reduced bottom padding */
   margin-bottom: 0;
+  overflow-x: hidden;
   background: var(--dark-bg);
   border-top: 1px solid rgba(255,255,255,0.1);
   border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+#globeContainer, #globeViz {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.stacks-card {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* 🔄 Scrolling rows should never exceed container */
+.stack-row {
+  width: 100%;
+  overflow: hidden;
+}
+.stack-track {
+  display: inline-flex;
+  white-space: nowrap;
+  width: max-content;
 }
 
 .about-container {
@@ -781,11 +808,11 @@ overflow: hidden; /* ensures globe doesn't spill out */
 
 /* Animations */
 .stack-row.right .stack-track {
-  animation: scrollRight 40s linear infinite;
+  animation: scrollRight 15s linear infinite;
 }
 
 .stack-row.left .stack-track {
-  animation: scrollLeft 40s linear infinite;
+  animation: scrollLeft 15s linear infinite;
 }
 
 /* Pause on hover */
@@ -1179,4 +1206,8 @@ overflow: hidden; /* ensures globe doesn't spill out */
     padding: 1rem;
     text-align: center;
   }
+}
+section, div {
+  max-width: 100%;
+  box-sizing: border-box;
 }
