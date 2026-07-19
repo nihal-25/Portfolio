@@ -44,9 +44,9 @@ Each project is one object. Copy an existing one as a template:
 
 - **Resume:** put your PDF at `public/resume.pdf`. The hero and footer
   already link to it.
-- **Photo:** put a square-ish headshot at `public/photo.jpg` (about
-  400x400px is plenty). The About section shows it automatically and
-  hides itself cleanly while the file is missing.
+- **Photo:** put a square-ish headshot at `public/photo.jpg` or
+  `public/photo.png` (about 400x400px is plenty). The About section shows
+  it automatically and hides itself cleanly while the file is missing.
 
 ## Publishing changes
 

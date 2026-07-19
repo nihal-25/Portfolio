@@ -5,20 +5,23 @@ import { about, site } from "@/content";
 import SectionHeading from "./SectionHeading";
 
 /**
- * The photo is optional: drop public/photo.jpg into the repo and it appears.
- * Existence is checked at build time (this is a server component under
- * static export), so there is no broken image when the file is missing.
+ * The photo is optional: drop public/photo.jpg or public/photo.png into the
+ * repo and it appears. Existence is checked at build time (this is a server
+ * component under static export), so there is no broken image when the file
+ * is missing.
  */
 export default function About() {
-  const hasPhoto = fs.existsSync(path.join(process.cwd(), "public/photo.jpg"));
+  const photo = ["photo.jpg", "photo.png"].find((name) =>
+    fs.existsSync(path.join(process.cwd(), "public", name)),
+  );
 
   return (
     <section id="about" aria-label="About" className="py-16">
       <SectionHeading label="About" />
       <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
-        {hasPhoto && (
+        {photo && (
           <Image
-            src="/photo.jpg"
+            src={`/${photo}`}
             alt={`Portrait of ${site.name}`}
             width={160}
             height={160}
