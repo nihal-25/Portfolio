@@ -18,7 +18,7 @@ export default function Nav() {
       </a>
       <nav
         aria-label="Main"
-        className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 xl:max-w-4xl"
       >
         <a href="#top" className="font-mono text-sm font-semibold text-ink">
           {site.name}

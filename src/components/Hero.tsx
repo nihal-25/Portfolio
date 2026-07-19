@@ -2,9 +2,9 @@ import { site } from "@/content";
 
 export default function Hero() {
   return (
-    <section aria-label="Introduction" className="pb-20 pt-20 sm:pt-28">
+    <section aria-label="Introduction" className="pb-14 pt-12 sm:pt-16">
       <p className="mb-4 font-mono text-sm text-accent">{site.role}</p>
-      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
         {site.name}
       </h1>
       <p className="mt-6 max-w-xl text-xl leading-relaxed text-ink sm:text-2xl">

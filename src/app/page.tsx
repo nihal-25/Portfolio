@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div id="top">
       <Nav />
-      <main id="main" className="mx-auto max-w-3xl px-6">
+      <main id="main" className="mx-auto max-w-3xl px-6 xl:max-w-4xl">
         <Hero />
         <About />
         <Projects />
